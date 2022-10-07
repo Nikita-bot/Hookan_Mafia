@@ -1,2 +1,8 @@
-/home/nikita/disk_D/store/src/main/java/ru/pazdrin/store/resources/JakartaEE9Resource.java
-/home/nikita/disk_D/store/src/main/java/ru/pazdrin/store/JakartaRestConfiguration.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\brand\BrandRouter.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\device\DeviceRouter.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\user\Registration.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\user\Authorization.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\controllers\UserController.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\JakartaRestConfiguration.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\user\Login.java
+D:\Hookan_Mafia\store\src\main\java\ru\pazdrin\store\resources\type\TypeRouter.java
