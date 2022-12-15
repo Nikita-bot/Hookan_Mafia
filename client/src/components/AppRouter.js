@@ -19,7 +19,6 @@ const AppRouter = () => {
             <Route path={DEVICE_ROUTE} element={<DevicePage />} />
             <Route path='*' element={<Shop />} />
        </Routes >
-    //    <Shop/>
 
     );
 }

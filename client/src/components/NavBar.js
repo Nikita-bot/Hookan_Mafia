@@ -16,11 +16,11 @@ const NavBar = observer(() => {
           <NavLink style={{color:'white'}} to={SHOP_ROUTE}>Hookah Mafia</NavLink>
           {user.isAuth ?
             <Nav className="ml-auto">
-                <Button variant={"outline-secondary"}>Админ панель</Button>
-                <Button variant={"outline-secondary"}>Войти</Button>
+                <Button variant={"outline-secondary"} className="mr-2">Админ панель</Button>
+                <Button variant={"outline-secondary"}>Выйти</Button>ы
             </Nav>
           : 
-          <Nav className="mr-auto">
+          <Nav className="ml-auto">
                 <Button variant={"outline-secondary"} onClick={()=>user.setIsAuth(true)}>Авторизация</Button>
             </Nav>
 

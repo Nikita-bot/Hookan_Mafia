@@ -17,6 +17,8 @@ export default class DeviceStore{
             {id:1,name:"Iphone 15 pro",price:"1003",strength:"7",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
             {id:1,name:"Iphone 16 pro",price:"1004",strength:"6",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
         ]
+        this._selectedType={}
+        this._selectedBrand={}
         makeAutoObservable(this)
     }
 
@@ -28,8 +30,8 @@ export default class DeviceStore{
         this._types = types
     }
 
-    get brans(){
-        return this._brans
+    get brands(){
+        return this._brands
     }
 
     setBrands(brands){
@@ -43,4 +45,22 @@ export default class DeviceStore{
     setDevices(devices){
         this._devices = devices
     }
+
+
+    setSelectedType(type){
+        this._selectedType = type
+    }
+
+    get selectedType(){
+        return this._selectedType
+    }
+
+    setSelectedBrand(brand){
+        this._selectedBrand = brand
+    }
+
+    get selectedBrand(){
+        return this._selectedBrand
+    }
+
 }
