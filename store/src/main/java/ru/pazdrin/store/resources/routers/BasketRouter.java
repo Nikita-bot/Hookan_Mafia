@@ -21,7 +21,6 @@ public class BasketRouter {
     @GET
     @Produces("application/json")
     public String getAll(@QueryParam("token")String token){
-
         return bc.getAll(token);
     }
 
