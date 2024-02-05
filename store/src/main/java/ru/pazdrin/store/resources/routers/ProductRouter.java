@@ -13,6 +13,8 @@ import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
 import ru.pazdrin.store.resources.controllers.ProductController;
+import ru.pazdrin.store.resources.websocket.ProductPriceSocket;
+
 
 /**
  *
@@ -28,6 +30,7 @@ public class ProductRouter {
     @Produces("application/json")
     @Consumes("text/plain")
     public String getProducts(@QueryParam("id")Integer id,@QueryParam("type_id")Integer type_id,@QueryParam("brand_id")Integer brand_id){
+        System.out.println("Product Router: "+type_id);
         if(id == null){
             return pc.getAll(type_id,brand_id);
         }
@@ -39,6 +42,14 @@ public class ProductRouter {
     @Consumes("application/json")
     public String addProducts(@HeaderParam("token")String token, String req){
         return pc.addNew(token, req);
+    }
+    
+    @GET
+    @Path("/ws")      
+    public String updatePrice(){
+        System.out.println("WebSocket message");
+        ProductPriceSocket.notifyClients();
+        return "Ok";
     }
 
 }

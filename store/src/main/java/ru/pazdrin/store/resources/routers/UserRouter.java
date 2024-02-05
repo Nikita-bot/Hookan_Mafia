@@ -4,6 +4,9 @@
  */
 package ru.pazdrin.store.resources.routers;
 
+import jakarta.annotation.Resource;
+import jakarta.enterprise.concurrent.ManagedExecutorService;
+import jakarta.enterprise.concurrent.ManagedThreadFactory;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.FormParam;
@@ -13,6 +16,7 @@ import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.Produces;
 import jakarta.ws.rs.QueryParam;
+import java.util.concurrent.ThreadFactory;
 import ru.pazdrin.store.resources.controllers.UserController;
 
 
@@ -25,6 +29,9 @@ public class UserRouter {
     
     @Inject
     UserController uc;
+    
+    @Resource
+    ManagedThreadFactory factory;
     
     @GET
     @Path("/login")
@@ -42,7 +49,7 @@ public class UserRouter {
         return uc.registration(req);
     }
     
-    @POST
+    @GET
     @Path("/auth")
     @Consumes("application/json")
     @Produces("application/json")

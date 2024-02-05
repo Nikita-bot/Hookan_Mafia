@@ -31,7 +31,7 @@ public class BrandRepository {
     public List<String> getAll(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("HookahMafia_Unit");
         EntityManager em = emf.createEntityManager();
-        Query q = em.createQuery("SELECT b.name FROM Brand b");
+        Query q = em.createQuery("SELECT b.id, b.name FROM Brand b");
         List<String> res = q.getResultList();
         em.close();
         emf.close();

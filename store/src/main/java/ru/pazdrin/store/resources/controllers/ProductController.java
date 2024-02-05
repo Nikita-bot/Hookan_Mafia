@@ -33,6 +33,7 @@ public class ProductController {
         User user = ChekerToken.check(token);
         if(user!=null && user.getRole() == 1){
             prod = gson.fromJson(req, Product.class);
+            
             pr.create(prod);
             return "Ok";
         }
@@ -45,4 +46,6 @@ public class ProductController {
     public String getOne(Integer id){
         return gson.toJson(pr.getOne(id));
     }
+    
+
 }

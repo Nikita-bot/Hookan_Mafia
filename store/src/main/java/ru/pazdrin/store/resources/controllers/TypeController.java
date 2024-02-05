@@ -37,7 +37,9 @@ public class TypeController {
     public String addNew(String token, String req){
         Gson gson = new Gson();
         User user = ChekerToken.check(token);
-        if(user!=null && user.getRole() == 1){
+        System.out.println("Add type:Controller User:" + token);
+        if(user!=null ){
+            
             type = gson.fromJson(req, Type.class);
             tr.create(type);
             return "Ok";

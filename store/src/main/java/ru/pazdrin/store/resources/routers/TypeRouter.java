@@ -34,7 +34,7 @@ public class TypeRouter {
     @Produces("application/json")
     @Consumes("application/json")
     public String addType(@HeaderParam("token")String token,String req){ 
-         
+        System.out.println("Add type token:" + token);
         return tc.addNew(token,req);
     }
 }

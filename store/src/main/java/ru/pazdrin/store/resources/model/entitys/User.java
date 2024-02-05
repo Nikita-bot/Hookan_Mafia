@@ -29,10 +29,6 @@ public class User {
     String phone;
     @Column(name = "password")
     String password;
-    @Column(name = "bonuses")
-    Integer bonuses;
-    @Column(name = "date_of_bithday")
-    String date_of_bithday;
     @Column(name = "role")
     int role;
     @Column(name = "name")
@@ -70,22 +66,7 @@ public class User {
         this.password = password;
     }
     
-    public Integer getBonuses(){
-        return this.bonuses;
-    }
-    
-    public void setBonuses(Integer bonuses){
-        this.bonuses = bonuses;
-    }
-    
-    public String getDate_of_bithday(){
-        return this.date_of_bithday;
-    }
-    
-    public void setDate_of_bithday(String date_of_bithday){
-        this.date_of_bithday = date_of_bithday;
-    }
-    
+   
     public int getRole(){
         return role;
     }

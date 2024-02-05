@@ -29,11 +29,11 @@ public class TypeRepository {
         emf.close();
     }
 
-    public List<String> getAll(){
+    public List<Type> getAll(){
         EntityManagerFactory emf = Persistence.createEntityManagerFactory("HookahMafia_Unit");
         EntityManager em = emf.createEntityManager();
-        Query q = em.createQuery("SELECT t.name FROM Type t");
-        List<String> res = q.getResultList();
+        Query q = em.createQuery("SELECT t.id, t.name FROM Type t");
+        List<Type> res = q.getResultList();
         em.close();
         emf.close();
         return res;

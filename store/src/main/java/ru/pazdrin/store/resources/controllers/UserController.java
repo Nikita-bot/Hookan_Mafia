@@ -21,18 +21,18 @@ import ru.pazdrin.store.resources.model.middlewhere.JWToken;
  *
  * @author nikit
  */
-public class UserController {
+public class UserController implements Runnable  {
     @Inject
     User user;
     @Inject
     UserRepository ur;
+    
     public String registration(String req){
         String token = null;
         
         Gson gs = new Gson();
         user = gs.fromJson(req, User.class);
 
-        user.setBonuses(0);
         user.setRole(0);
 
         Integer id = ur.getUserByPhone(user.getPhone());
@@ -77,8 +77,13 @@ public class UserController {
         Gson gson = new Gson();
         User user = ChekerToken.check(token);
         if(user!=null){
-            return gson.toJson(JWToken.generateToken(user.getId(), user.getName(), user.getRole()));
+            return token;
         }
         else return "Invalid token";
+    }
+
+    @Override
+    public void run() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

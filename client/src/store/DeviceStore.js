@@ -10,12 +10,12 @@ export default class DeviceStore{
             {id:1,name:"Toshiba"},
             {id:2,name:"Samsung"}
         ]
-        this._device = [
-            {id:1,name:"Iphone 12 pro",price:"1000",strength:"10",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
-            {id:1,name:"Iphone 13 pro",price:"1001",strength:"9",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
-            {id:1,name:"Iphone 14 pro",price:"1002",strength:"8",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
-            {id:1,name:"Iphone 15 pro",price:"1003",strength:"7",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
-            {id:1,name:"Iphone 16 pro",price:"1004",strength:"6",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png"},
+        this._devices = [
+            {id:1,name:"Iphone 12 pro",price:"1000",strength:"10",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png", description: "Легкий вкусный чайный лист"},
+            {id:2,name:"Iphone 13 pro",price:"1001",strength:"9",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png", description: "Легкий вкусный чайный лист"},
+            {id:3,name:"Iphone 14 pro",price:"1002",strength:"8",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png", description: "Легкий вкусный чайный лист"},
+            {id:4,name:"Iphone 15 pro",price:"1003",strength:"7",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png", description: "Легкий вкусный чайный лист"},
+            {id:5,name:"Iphone 16 pro",price:"1004",strength:"6",img:"https://burntobacco.com/wp-content/uploads/2021/11/BlackBurn-pachka.png", description: "Легкий вкусный чайный лист"}
         ]
         this._selectedType={}
         this._selectedBrand={}
