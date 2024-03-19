@@ -12,8 +12,7 @@ import ProductPriceWebSocket from "./websocket/ProductPriceWebSocket";
 const App = observer(() => {
   const {user} = useContext(Context)
   const [loading, setLoading] = useState(true)
-
-  //Чтоб пользователь не был авторизован постоянно
+  //useEffect - сообщаем что делать после рендра
   useEffect(()=>{
     check().then(data =>{
       user.setUser(true)
